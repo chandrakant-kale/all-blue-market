@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import React, { useState } from 'react'
+import mapImg from '@/public/image.png'
 
 function SearchIcon() {
   return (
@@ -49,7 +50,7 @@ export default function page() {
 
           {/* Join */}
           <Link
-            href="/join"
+            href="/"
             className="inline-flex h-10 shrink-0 items-center justify-center rounded-xl border border-blue-400/30
              bg-[#06438a] px-5 text-sm font-semibold text-white transition-colors hover:border-blue-300/60
               hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 
@@ -100,7 +101,7 @@ export default function page() {
                 <SearchIcon />
               </button>
 
-              
+
             </form>
 
             {/* Quick options */}
@@ -125,11 +126,14 @@ export default function page() {
 
           {/* Map placeholder */}
           <div
-            className="flex min-h-72 w-full items-center justify-center rounded-2xl border border-blue-200 bg-[#e8effb]
-             text-sm font-medium text-[#0a2654] sm:min-h-96 lg:min-h-120 lg:w-[60%]"
+            className="flex min-h-72 w-full items-center justify-center rounded-2xl border border-blue-200 bg-[#6795e4]
+             text-sm font-medium text-[#0a2654] sm:min-h-96 lg:min-h-120 lg:w-[60%] shadow-lg shadow-black/30"
             aria-label="Map showing nearby places"
           >
-            Map
+            <img
+              src={mapImg.src}
+              alt="map"
+              className="h-full w-full object-cover" />
           </div>
 
         </section>
@@ -148,13 +152,13 @@ export default function page() {
           </Link>
 
           <div className='flex flex-col'>
-            <Link href="/about">About us</Link>
-            <Link href="/service">Service</Link>
+            <Link href="/">About us</Link>
+            <Link href="/">Service</Link>
           </div>
 
           <div className='flex flex-col'>
-            <Link href="/privacy/policy">privacy & policy</Link>
-            <Link href="/term">Terms & co</Link>
+            <Link href="/">privacy & policy</Link>
+            <Link href="/">Terms & co</Link>
           </div>
 
         </div>
